@@ -28,7 +28,7 @@ function husky() { //This function chooses one action from an array to tell what
 }
 
 function constant_Function() { //This function uses a constant and provides it with multiple values before then editing one value and adding another, then using those values to finish the provided sentance
-    const Musical_Instrument = {type:"guitar", brand:"Gibson", color:"black"};
+    let Musical_Instrument = {type:"guitar", brand:"Gibson", color:"black"};
     Musical_Instrument.color = "blue";
     Musical_Instrument.price = "$900";
     document.getElementById("Constant").innerHTML = "The cost of the " + Musical_Instrument.brand + " " + Musical_Instrument.type + " was " + Musical_Instrument.price;
