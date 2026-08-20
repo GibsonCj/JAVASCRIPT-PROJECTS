@@ -1,5 +1,5 @@
 //Keeps track of whose turn it is
-let activePlayer = 'x';
+let activePlayer = 'X';
 //This array stores an array of moves. Used to determine win conditions
 let selectedSquares = [];
 
