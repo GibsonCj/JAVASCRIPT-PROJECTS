@@ -40,13 +40,14 @@ function getTopping(runningTotal,text1) {
             text1 = text1+toppingArray[j].value+"<br>";
         }
     }
-    var toppingCount = selectedTopping.length;
+    var toppingCount = selectedTopping.length; //Finds the number of toppings chosen before reducing the count itself by 1 to calculate the inclusion of a free topping
     if (toppingCount > 1) {
         toppingTotal = (toppingCount - 1);
     } else {
         toppingTotal = 0;
     }
-    runningTotal = (runningTotal + toppingTotal); //Combines initial pizza cost with toppings cost 
+    runningTotal = (runningTotal + toppingTotal); //Combines initial pizza cost with toppings cost
+    //These logs send the chosen size and topping options along with price calculation to the console 
     console.log("total selected topping items: "+toppingCount);
     console.log(toppingCount+" topping - 1 free topping = "+"$"+toppingTotal+".00");
     console.log("topping text1: "+text1);
