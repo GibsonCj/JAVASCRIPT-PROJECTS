@@ -11,14 +11,14 @@
 <body>
 	<div class='container' id="content">
 		<h1>Sign up for our Newsletter</h1>
-		<div class="display">
+		<div class="display"> <!--Email Form to be replaced with response content after submitting with AJAX-->
 			<form>
 				<input id="fullName" placeholder="Name">
 				<input placeholder="Email">
-				<input onclick="getMsg();" type="button" class="btn" value="Submit" />
+				<input onclick="getMsg();" type="button" class="btn" value="Submit" /> <!--triggers the JavaScript function used to get the new data for the email response--> 
 			</form>
 		</div>
 	</div>
-	<script src="ajaxScript.js"></script>
+	<script src="ajaxScript.js"></script> <!--Javascript code used to call to the server and create the response file to be used through AJAX-->
 </body>
 </html>
