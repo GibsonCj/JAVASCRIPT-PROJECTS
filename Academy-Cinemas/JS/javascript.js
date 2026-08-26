@@ -33,3 +33,30 @@ function displaySelectedMovieOptions() {
 function buyTickets() {
     displaySelectedMovieOptions();
 }
+
+//JQuery
+
+//Shrinks header size when the document is scrolled by 80 pixels
+$(document).on("scroll", function() {
+    //When the page is scrolled down from the top by 50 pixels, this if statement will trigger
+    if ($(document).scrollTop() > 50) {
+        //Once the requirement is met, adds the nav-shrink class selector to the same element that has the nav class
+        $("nav").addClass("nav-shrink");
+        //Adjust the position of the mobile drop down menu to accommodate the new height decrease
+        $("div.navbar-collapse").css("margin-top", "-6px");
+    } else {
+        //if the page has not been scrolled down or is back at the top, the nav-shrink class selector is removed from the HTML element with the nav class selector
+        $("nav").removeClass("nav-shrink");
+        //Margin for the drop down menu is now returned to its original amount
+        $("div.navbar-collapse").css("margin-top", "14px")
+    }
+});
+
+//Close the mobile menu when a nav link is clicked
+$(document).ready(function(){
+    //On click when and element contains just the nav-link class and not the dropdown-toggle and then also close when an element with the class .dropdown-item (each movie link) has been clicked
+    $(".navbar-nav").on('click', '.nav-link:not(".dropdown-toggle"), .dropdown-item', function() {
+        //Collapse the navbar when a link or dropdown item is clicked
+        $(".navbar-collapse").collapse('hide');
+    });
+});
